@@ -48,6 +48,7 @@ function gettingJSON(){
         console.log(JSON.stringify(json))
         document.querySelector('#loc').innerHTML = json['name'];
         document.querySelector('#temp').innerHTML = json['main']['temp'];
+        document.querySelector('#condition').innerHTML = json['weather'][0]['description'];
         document.querySelector('#tempImg').src = 'http://openweathermap.org/img/wn/' + json['weather'][0]['icon'] +'.png';
         document.querySelector('#tempImg').alt = json['weather'][0]['description'];
         // document.querySelector('#tempImg').title = json
